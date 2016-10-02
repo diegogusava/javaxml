@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sale  xmlns="http://www.diegogusava.com/javaxml/schemas">
+
+    <products>
+        <product>
+            <name>Java Book</name>
+            <price>29.90</price>
+        </product>
+        <product>
+            <name>Scala Book</name>
+            <price>29.90</price>
+        </product>
+        <product>
+            <name>Delphi Book</name>
+            <price>29.90</price>
+        </product>
+    </products>
+
+</sale>

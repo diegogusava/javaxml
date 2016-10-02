@@ -1,0 +1,56 @@
+= Java XML
+
+Utilizando bibliotecas Java para manipular XML
+
+== Java API for XML Processing (JAXP)
+
+JAXP é uma API Java para processamento de XML, possibilitando
+manipular XML utilizando os padrões DOM ou SAX.
+
+== Document Object Model (DOM)
+
+Parser que manipula XML todo em memória. Ideal para XML pequenos.
+
+== Simple API para XML (SAX)
+
+Baseado em eventos, esse parser tem a vantagem de manipular XML sem a necessidade
+de colocar todo o XML em memória. API para leitura apenas.
+
+== SAXT
+
+Baseado em eventos como SAX, mas a maneira para escutar esses eventos é feito através de
+um iterator, sendo possível voltar para eventos anteriores. API bidirecional, podendo
+tanto ler como escrever.
+
+https://docs.oracle.com/javase/tutorial/jaxp/stax/index.html:[Para saber mais]
+
+== XSLT
+
+Utilizado para transformar XML em outros formatos, por exemplo HTML
+
+== Java Architecture for XML Binding (JAXB)
+
+Prove uma maneira fácil de representar XML com classes Java, sem a necessidade de converter
+cada tag para um atributo Java na mão.
+
+A desvantagem de usar JAXB é que todo o XML é manipulado em memória, caso o arquivo seja
+muito grande, pode ser problemátivo, já que o consumo de memória será grande.
+
+https://docs.oracle.com/javase/tutorial/jaxb/intro/:[Para saber mais]
+
+http://blog.bdoughan.com/2010/08/jaxb-namespaces.html:[JAXB Namespace]
+
+== XSD
+
+Descreve a estrutura de um XML, podendo ser utilizado para validação de XML.
+
+http://www.w3schools.com/xml/schema_intro.asp:[Para saber mais]
+
+=== Glosário
+
+Marshal = Transforma objetos Java em XML +
+Unmarshal = Transforma XML para objetos Java
+
+
+
+

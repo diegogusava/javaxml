@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.diegogusava.com/javaxml/schemas"
+           xmlns:jxml="http://www.diegogusava.com/javaxml/schemas"
+           elementFormDefault="qualified">
+
+    <!--
+    xmlns = xml name space
+    targetNamespace = specified that this document refers to the namespace specified
+    elementFormDefault qualified = means that the elements refers to elements inside this document
+                                   within this namespace. Without specifing this, the elements (complex type, simple
+                                   type) have no namespace.
+    -->
+
+    <xs:element name="sale">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="products" type="jxml:ct_products" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="ct_products">
+        <xs:sequence>
+            <xs:element name="product" type="jxml:ct_product" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ct_product">
+        <xs:sequence>
+            <xs:element name="name" type="jxml:st_product_name"/>
+            <xs:element name="price" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="st_product_name">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="250"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
